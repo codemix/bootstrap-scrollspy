@@ -1,7 +1,7 @@
 function(){
   var jQuery = require('jquery');
   /* =============================================================
-   * bootstrap-scrollspy.js v2.0.0
+   * bootstrap-scrollspy.js v2.0.1
    * http://twitter.github.com/bootstrap/javascript.html#scrollspy
    * =============================================================
    * Copyright 2012 Twitter, Inc.
@@ -124,6 +124,5 @@ function(){
       })
     })
   
-  }( jQuery )
-  
+  }( jQuery );
 }
