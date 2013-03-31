@@ -1,7 +1,7 @@
 function(){
   var jQuery = require('jquery');
   /* =============================================================
-   * bootstrap-scrollspy.js v2.0.4
+   * bootstrap-scrollspy.js v2.1.0
    * http://twitter.github.com/bootstrap/javascript.html#scrollspy
    * =============================================================
    * Copyright 2012 Twitter, Inc.
@@ -25,15 +25,15 @@ function(){
     "use strict"; // jshint ;_;
   
   
-    /* SCROLLSPY CLASS DEFINITION
-     * ========================== */
+   /* SCROLLSPY CLASS DEFINITION
+    * ========================== */
   
-    function ScrollSpy( element, options) {
+    function ScrollSpy(element, options) {
       var process = $.proxy(this.process, this)
         , $element = $(element).is('body') ? $(window) : $(element)
         , href
       this.options = $.extend({}, $.fn.scrollspy.defaults, options)
-      this.$scrollElement = $element.on('scroll.scroll.data-api', process)
+      this.$scrollElement = $element.on('scroll.scroll-spy.data-api', process)
       this.selector = (this.options.target
         || ((href = $(element).attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
         || '') + ' .nav li > a'
@@ -60,7 +60,7 @@ function(){
                 , href = $el.data('target') || $el.attr('href')
                 , $href = /^#\w/.test(href) && $(href)
               return ( $href
-                && href.length
+                && $href.length
                 && [[ $href.position().top, href ]] ) || null
             })
             .sort(function (a, b) { return a[0] - b[0] })
@@ -110,7 +110,7 @@ function(){
             .parent('li')
             .addClass('active')
   
-          if (active.parent('.dropdown-menu'))  {
+          if (active.parent('.dropdown-menu').length)  {
             active = active.closest('li.dropdown').addClass('active')
           }
   
@@ -123,7 +123,7 @@ function(){
    /* SCROLLSPY PLUGIN DEFINITION
     * =========================== */
   
-    $.fn.scrollspy = function ( option ) {
+    $.fn.scrollspy = function (option) {
       return this.each(function () {
         var $this = $(this)
           , data = $this.data('scrollspy')
@@ -143,7 +143,7 @@ function(){
    /* SCROLLSPY DATA-API
     * ================== */
   
-    $(function () {
+    $(window).on('load', function () {
       $('[data-spy="scroll"]').each(function () {
         var $spy = $(this)
         $spy.scrollspy($spy.data())
