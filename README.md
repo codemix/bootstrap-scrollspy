@@ -1,4 +1,8 @@
-bootstrap-scrollspy
-===================
+# bootstrap-scrollspy
+The scrollspy plugin from twitter bootstrap
 
-Twitter Bootstrap Scrollspy plugin packaged for component.js instead of bower
+For full documentation see http://twitter.github.com/bootstrap/javascript.html#scrollspy
+
+This is a component.js compatible distribution of bootstrap-scrollspy, automatically generated
+from the latest twitter/bootstrap master every 6 hours. It is part of the <a href="http://github.com/codemix/bootstrap-component">Bootstrap Component</a>
+project.
