@@ -1,4 +1,4 @@
-function(){
+(function(){
   var jQuery = require('jquery');
   /* =============================================================
    * bootstrap-scrollspy.js v2.3.1
@@ -162,4 +162,4 @@ function(){
     })
   
   }(jQuery);
-}()
+})()
