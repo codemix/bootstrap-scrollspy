@@ -1,10 +1,9 @@
 (function(){
-  var jQuery = require('jquery');
   /* ========================================================================
-   * Bootstrap: scrollspy.js v3.0.0
-   * http://twbs.github.com/bootstrap/javascript.html#scrollspy
+   * Bootstrap: scrollspy.js v3.0.2
+   * http://getbootstrap.com/javascript/#scrollspy
    * ========================================================================
-   * Copyright 2012 Twitter, Inc.
+   * Copyright 2013 Twitter, Inc.
    *
    * Licensed under the Apache License, Version 2.0 (the "License");
    * you may not use this file except in compliance with the License.
@@ -115,7 +114,7 @@
           .addClass('active')
       }
   
-      active.trigger('activate')
+      active.trigger('activate.bs.scrollspy')
     }
   
   

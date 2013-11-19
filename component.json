@@ -3,9 +3,7 @@
   "repo": "codemix/bootstrap-scrollspy",
   "description": "The scrollspy plugin from twitter bootstrap",
   "version": "3.0.0",
-  "dependencies": {
-    "component/jquery": "*"
-  },
+  "dependencies": {},
   "scripts": [
     "index.js"
   ],
