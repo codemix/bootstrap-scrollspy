@@ -1,4 +1,4 @@
-(function(){
+;(function(){
   /* ========================================================================
    * Bootstrap: scrollspy.js v3.0.2
    * http://getbootstrap.com/javascript/#scrollspy
@@ -158,4 +158,4 @@
   
   }(jQuery);
   
-})()
+})();
